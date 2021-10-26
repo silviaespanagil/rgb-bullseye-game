@@ -34,6 +34,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7B001772727EB1B00D4874D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A7B001792727EB4100D4874D /* ContentView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A7B001792727EB4100D4874D /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				A7DE955427201FBF00FC8EA1 /* ContentViewModel.swift */,
+				A7DE9548271F1E8800FC8EA1 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
 		A7DE953A271F1E8800FC8EA1 = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +70,8 @@
 		A7DE9545271F1E8800FC8EA1 /* RGBullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				A7B001772727EB1B00D4874D /* Scenes */,
 				A7DE9546271F1E8800FC8EA1 /* RGBullsEyeApp.swift */,
-				A7DE9548271F1E8800FC8EA1 /* ContentView.swift */,
-				A7DE955427201FBF00FC8EA1 /* ContentViewModel.swift */,
 				A7DE954A271F1E8B00FC8EA1 /* Assets.xcassets */,
 				A7DE954C271F1E8B00FC8EA1 /* Preview Content */,
 			);

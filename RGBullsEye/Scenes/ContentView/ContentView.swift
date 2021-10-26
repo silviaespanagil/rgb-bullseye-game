@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var showAlert = false
+    
     @StateObject var viewModel: ContentViewModel
     
     var body: some View {
@@ -43,56 +44,64 @@ struct ContentView: View {
                 
                 Button(action: {
                     self.showAlert = true
-                    }){
-                        Text("Validate my match!")
-                    }
+                }){
+                    Text("Validate my match!")
+                }
                 .padding()
                 .background(
                     
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.white)
                         .shadow(color: .gray, radius: 2, x: 0, y: 2)
-            )
+                )
                 .buttonStyle(PlainButtonStyle())
-                .alert(isPresented: $showAlert) {
-                  Alert(title: Text("Your Score"),
-                        message: Text("\(viewModel.computeScore())"),
-                        primaryButton: .destructive(Text("New try")){
-                      viewModel.rGuess = 0.5
-                      viewModel.bGuess = 0.5
-                      viewModel.gGuess = 0.5
-                  },
-                        secondaryButton: .default(Text("Keep trying"))
-                  )
-                }
             }
-            VStack { 
+            
+            VStack {
+                
                 Text("0")
                     .foregroundColor(.red)
                 Slider(value: $viewModel.rGuess)
                 Text("255")
                     .foregroundColor(.red)
+                
                 Text("0")
                     .foregroundColor(.green)
                 Slider(value: $viewModel.gGuess)
                 Text("255")
                     .foregroundColor(.green)
+                
                 Text("0")
                     .foregroundColor(.blue)
                 Slider(value: $viewModel.bGuess)
                 Text("255")
                     .foregroundColor(.blue)
+                
             }
             .padding()
         }
         
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Your Score"),
+                  message: Text("\(viewModel.computeScore())"),
+                  primaryButton: .destructive(Text("New try")){
+                viewModel.rGuess = 0.5
+                viewModel.bGuess = 0.5
+                viewModel.gGuess = 0.5
+            },
+                  secondaryButton: .default(Text("Keep trying"))
+            )
+        }
     }
 }
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(viewModel: ContentViewModel())
 
+struct ContentView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        ContentView(viewModel: ContentViewModel())
+        
     }
 }
- 
- 
+
+

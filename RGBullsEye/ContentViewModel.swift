@@ -6,4 +6,38 @@
 //
 
 import Foundation
-//aqui deberia ir la funcion computeScore()
+import SwiftUI
+
+class ContentViewModel: ObservableObject {
+    
+    //Variables
+    
+    let rTarget = Double.random(in: 0..<1)
+    let gTarget = Double.random(in: 0..<1)
+    let bTarget = Double.random(in: 0..<1)
+    
+    @Published var rGuess: Double
+    @Published var gGuess: Double
+    @Published var bGuess: Double
+    
+    init() {
+        
+        rGuess = 0.5
+        gGuess = 0.5
+        bGuess = 0.5
+    }
+    
+    
+    //MARK: Methods
+    
+    func computeScore() -> Int {
+        
+        let rDiff = rGuess - rTarget
+        let gDiff = gGuess - gTarget
+        let bDiff = bGuess - bTarget
+        let diff = sqrt(rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)
+        return Int((1.0 - diff) * 100.0 + 0.5)
+    }
+    
+}
+

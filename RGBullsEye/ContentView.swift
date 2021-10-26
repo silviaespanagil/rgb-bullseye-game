@@ -16,7 +16,9 @@ struct ContentView: View {
     @State var gGuess: Double
     @State var bGuess: Double
     @State var showAlert = false
-
+    @StateObject var viewModel: ContentViewModel
+    
+    
 
     func computeScore() -> Int {
       let rDiff = rGuess - rTarget
@@ -28,6 +30,9 @@ struct ContentView: View {
 
     
     var body: some View {
+        
+        
+        
         VStack{
             HStack {
                 VStack {
@@ -98,7 +103,7 @@ struct ContentView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(rGuess: 0.5, gGuess: 0.5, bGuess: 0.5)
+        ContentView(rGuess: 0.5, gGuess: 0.5, bGuess: 0.5, viewModel: ContentViewModel())
 
     }
 }

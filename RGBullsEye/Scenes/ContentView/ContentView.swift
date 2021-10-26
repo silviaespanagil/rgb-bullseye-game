@@ -85,9 +85,7 @@ struct ContentView: View {
             Alert(title: Text("Your Score"),
                   message: Text("\(viewModel.computeScore())"),
                   primaryButton: .destructive(Text("New try")){
-                viewModel.rGuess = 0.5
-                viewModel.bGuess = 0.5
-                viewModel.gGuess = 0.5
+                viewModel.resetGuessNumber()
             },
                   secondaryButton: .default(Text("Keep trying"))
             )

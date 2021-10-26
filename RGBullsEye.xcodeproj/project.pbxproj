@@ -14,7 +14,18 @@
 		A7DE955527201FBF00FC8EA1 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE955427201FBF00FC8EA1 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A7B001872727F51000D4874D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7DE953B271F1E8800FC8EA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7DE9542271F1E8800FC8EA1;
+			remoteInfo = RGBullsEye;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A7B001832727F51000D4874D /* RGBullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGBullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DE9543271F1E8800FC8EA1 /* RGBullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DE9546271F1E8800FC8EA1 /* RGBullsEyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBullsEyeApp.swift; sourceTree = "<group>"; };
 		A7DE9548271F1E8800FC8EA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +35,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A7B001802727F51000D4874D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7DE9540271F1E8800FC8EA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				A7DE9543271F1E8800FC8EA1 /* RGBullsEye.app */,
+				A7B001832727F51000D4874D /* RGBullsEyeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +108,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A7B001822727F51000D4874D /* RGBullsEyeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7B001892727F51000D4874D /* Build configuration list for PBXNativeTarget "RGBullsEyeTests" */;
+			buildPhases = (
+				A7B0017F2727F51000D4874D /* Sources */,
+				A7B001802727F51000D4874D /* Frameworks */,
+				A7B001812727F51000D4874D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7B001882727F51000D4874D /* PBXTargetDependency */,
+			);
+			name = RGBullsEyeTests;
+			productName = RGBullsEyeTests;
+			productReference = A7B001832727F51000D4874D /* RGBullsEyeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A7DE9542271F1E8800FC8EA1 /* RGBullsEye */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7DE9551271F1E8B00FC8EA1 /* Build configuration list for PBXNativeTarget "RGBullsEye" */;
@@ -116,6 +153,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					A7B001822727F51000D4874D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = A7DE9542271F1E8800FC8EA1;
+					};
 					A7DE9542271F1E8800FC8EA1 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -135,11 +176,19 @@
 			projectRoot = "";
 			targets = (
 				A7DE9542271F1E8800FC8EA1 /* RGBullsEye */,
+				A7B001822727F51000D4874D /* RGBullsEyeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A7B001812727F51000D4874D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7DE9541271F1E8800FC8EA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +201,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A7B0017F2727F51000D4874D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7DE953F271F1E8800FC8EA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,7 +220,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A7B001882727F51000D4874D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7DE9542271F1E8800FC8EA1 /* RGBullsEye */;
+			targetProxy = A7B001872727F51000D4874D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A7B0018A2727F51000D4874D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = silvia.RGBullsEyeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RGBullsEye.app/RGBullsEye";
+			};
+			name = Debug;
+		};
+		A7B0018B2727F51000D4874D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = silvia.RGBullsEyeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RGBullsEye.app/RGBullsEye";
+			};
+			name = Release;
+		};
 		A7DE954F271F1E8B00FC8EA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +450,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A7B001892727F51000D4874D /* Build configuration list for PBXNativeTarget "RGBullsEyeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B0018A2727F51000D4874D /* Debug */,
+				A7B0018B2727F51000D4874D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A7DE953E271F1E8800FC8EA1 /* Build configuration list for PBXProject "RGBullsEye" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

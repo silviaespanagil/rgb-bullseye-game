@@ -28,7 +28,7 @@ class ContentViewModel: ObservableObject {
     }
     
     
-    //MARK: Methods
+    //Methods
     
     func computeScore() -> Int {
         
@@ -37,6 +37,13 @@ class ContentViewModel: ObservableObject {
         let bDiff = bGuess - bTarget
         let diff = sqrt(rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)
         return Int((1.0 - diff) * 100.0 + 0.5)
+    }
+    
+    func resetGuessNumber() {
+        rGuess = 0.5
+        gGuess = 0.5
+        bGuess = 0.5
+    
     }
     
 }
